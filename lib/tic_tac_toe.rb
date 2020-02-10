@@ -121,7 +121,6 @@ def draw?
   end
 end
 
-
 def over?
   if won? || full? || draw?
     true
@@ -130,5 +129,15 @@ def over?
   end
 end
 
+def winner
+  idx = won?
+  if won? == false
+    nil
+  elsif  board[idx[0]] == "X"
+    "X"
+  else
+    "O"
+  end
+end
 
 end
