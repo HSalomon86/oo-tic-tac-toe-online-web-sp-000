@@ -44,7 +44,7 @@ class TicTacToe
     # elsif occ == "O"
     #   count += 1
     # end
-  # end
+  end
   count
 end
 
