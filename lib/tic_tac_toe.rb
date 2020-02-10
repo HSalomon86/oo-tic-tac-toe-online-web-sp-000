@@ -140,4 +140,20 @@ def winner
   end
 end
 
+def play
+
+  until over?
+    turn
+  end
+
+    if won? && winner == "X"
+      puts "Congratulations X!"
+    elsif won? && winner == "O"
+      puts "Congratulations O!"
+    elsif draw?
+      puts "Cat's Game!"
+    end
+end
+
+
 end
