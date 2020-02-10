@@ -112,4 +112,15 @@ def full?
   @board.all? { |full| full == "X" || full == "O"}
 end
 
+
+def draw?
+  if !won? && full?
+    return true
+  else
+    return false
+  end
+end
+
+
+
 end
