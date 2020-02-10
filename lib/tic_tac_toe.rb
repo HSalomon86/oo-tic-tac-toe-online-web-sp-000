@@ -23,18 +23,17 @@ class TicTacToe
   end
 
   def input_to_index(num)
-  @index = num.to_i - 1
+  index = num.to_i - 1
 
-  @index
+  index
   end
 
-  def move(character,index)
-    @index = index
-    @board[@index] = character
+  def move(index,character)
+    @board[index] = character
   end
 
-  def position_taken?
-    !(@board[@index].nil? || @board[@index] == " ")
+  def position_taken?(index)
+    !(@board[index].nil? || @board[index] == " ")
   end
 
 end
