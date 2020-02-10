@@ -36,9 +36,9 @@ class TicTacToe
     !(@board[index].nil? || @board[index] == " ")
   end
 
-  def valid_move?(board, index)
+  def valid_move?(index)
   # board = @board
-  if !(position_taken?(board, index)) && on_board?(index)
+  if !(position_taken?(@board, index)) && on_board?(index)
     return true
   else
     return false
