@@ -36,6 +36,18 @@ class TicTacToe
     !(@board[index].nil? || @board[index] == " ")
   end
 
+  def turn_count
+  count = 0
+  @board.each  {|occ| occ == "X" || occ == "O"? count+=1}
+    # if occ == "X"
+    #   count += 1
+    # elsif occ == "O"
+    #   count += 1
+    # end
+  end
+  count
+end
+
   def on_board?(num)
     if num.between?(0, 8)
       return true
