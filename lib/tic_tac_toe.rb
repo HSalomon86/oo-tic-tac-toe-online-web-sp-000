@@ -87,4 +87,25 @@ def turn
   display_board
 end
 
+def won?
+  WIN_COMBINATIONS.each do |wins|
+
+    win_index_1 = wins[0]
+    win_index_2 = wins[1]
+    win_index_3 = wins[2]
+
+    position_1 = @board[win_index_1]
+    position_2 = @board[win_index_2]
+    position_3 = @board[win_index_3]
+
+    if (position_1 == "X" && position_2 == "X" && position_3 == "X")
+      return wins
+    elsif
+      (position_1 == "O" && position_2 == "O" && position_3 == "O")
+      return wins
+    end
+  end
+  return false
+end
+
 end
