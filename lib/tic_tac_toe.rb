@@ -73,4 +73,18 @@ def current_player
   end
 end
 
+def turn
+  puts "Please enter 1-9:"
+  num = gets.strip
+  input = input_to_index(num)
+  character = current_player
+
+  if valid_move?(board, input)
+    move(input, character)
+  else
+    turn
+  end
+  display_board
+end
+
 end
