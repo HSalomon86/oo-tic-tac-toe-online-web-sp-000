@@ -124,9 +124,9 @@ end
 
 def over?
   if won? || full? || draw?
-    return true
+    true
   else
-    return false
+    false
   end
 end
 
