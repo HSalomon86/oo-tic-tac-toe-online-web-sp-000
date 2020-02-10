@@ -108,4 +108,8 @@ def won?
   return false
 end
 
+def full?
+  @board.all? { |full| full == "X" || full == "O"}
+end
+
 end
