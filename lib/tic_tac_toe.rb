@@ -133,7 +133,7 @@ def winner
   idx = won?
   if won? == false
     nil
-  elsif  board[idx[0]] == "X"
+  elsif  @board[idx[0]] == "X"
     "X"
   else
     "O"
